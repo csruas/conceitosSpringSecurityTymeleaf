@@ -40,6 +40,8 @@ public class ConfiguracoesSeguranca {
                         .defaultSuccessUrl("/")
                         .permitAll())
                 .logout(logout -> logout.logoutSuccessUrl("/login?logout").permitAll())
+                .rememberMe( rememberMe -> rememberMe.key("lembrarDeMin")
+                .alwaysRemember(true))
                 .build();
     }
 }
